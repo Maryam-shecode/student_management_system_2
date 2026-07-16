@@ -1,2 +1,2 @@
-class quiz:
-    def __init__(self):
+class Quiz(Assessment):
+    def

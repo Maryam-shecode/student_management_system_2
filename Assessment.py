@@ -15,4 +15,3 @@ class Assessment:
             return "Good"
         else:
             return" You need to study hard! "
-        
