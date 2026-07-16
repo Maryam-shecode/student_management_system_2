@@ -18,4 +18,3 @@ class Assessment:
     def display_info(self):
         print("Assessment title : ", self.title)
         print("Maximum score: ", self.max_score)
-        
