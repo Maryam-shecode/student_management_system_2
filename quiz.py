@@ -11,7 +11,7 @@ class Quiz(Assessment):
             return " Nice job"
         elif percentage>=70:
             return "well done"
-        elif percentage>=60:
+        elif percentage>=55:
             return" you need more practice!"
         else:
             return" study hard!"
