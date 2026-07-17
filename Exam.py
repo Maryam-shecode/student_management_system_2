@@ -5,5 +5,8 @@ class Exam(Assessment):
         print("Maximum score: ", self.max_score)
     def grade_message(self,score):
         percentage=self.calculate_percentage(score)
-        if percentage 55>=
+        if percentage >=55:
+            return "passed exam"
+        else:
+            return "failed exam!"
 
