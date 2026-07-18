@@ -49,6 +49,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python._pydev_execfile.executor": "Run",
     "Python.course.executor": "Run",
     "Python.graded_book.executor": "Run",
     "Python.main.executor": "Run",
