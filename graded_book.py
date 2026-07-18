@@ -61,6 +61,6 @@ class Gradedbook:
             if student.name== keyword:
                 return student
         return None
-    
+    def __delete__(self, instance):
 
 
