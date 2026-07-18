@@ -28,6 +28,10 @@ class Graded_book:
             self.grade[student_id]={}
         student_grade=self.grade[student_id]
         if course_code not in self.grade[student_id]:
-            self.
+            self.grade[student_id][course_code]={}
+        self.grade[student_id][course_code][assessment_title]={}
+        print("Grade recorded successfully.")
+    def calculate_average
+
 
 
