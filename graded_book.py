@@ -31,7 +31,13 @@ class Graded_book:
             self.grade[student_id][course_code]={}
         self.grade[student_id][course_code][assessment_title]={}
         print("Grade recorded successfully.")
-    def calculate_average
+    def calculate_average(self,student_id, course_code):
+        score=self.grade[student_id][course_code].values()
+
+        if len(score)==0:
+            return 0
+        average=sum(score)/len(score)
+        return average
 
 
 
