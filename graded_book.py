@@ -1,4 +1,4 @@
-class Graded_book:
+class Gradedbook:
     def __init__(self):
         self.student={}
         self.courses={}
@@ -23,10 +23,10 @@ class Graded_book:
             print("Assessment is added")
         else:
             print("Course is not found!")
-    def record_grade(self,student_id, course_code, assessment_title, score):
+    def record_grade(self,student_id, course_code, assessment_title,score):
         if student_id not in self.grade:
             self.grade[student_id]={}
-        student_grade=self.grade[student_id]
+        student_grade =self.grade[student_id]
         if course_code not in self.grade[student_id]:
             self.grade[student_id][course_code]={}
         self.grade[student_id][course_code][assessment_title]={}
@@ -38,11 +38,22 @@ class Graded_book:
             return 0
         average=sum(score)/len(score)
         return average
+    def get_result(self,average):
+        if average>=self.passing_grade:
+            return "pass"
+        else:
+            return "failed"
+
     def show_report(self, student_id):
         student=self.student[student_id]
         print("Student: ",student.name)
         print("Student Id: ", student.student_id)
         for course in self.grade[student_id]:
-
+            average =self.calculate_average(student_id,course)
+            result=self.get_result(average)
+            print("course")
+            print("Average: ",average)
+            print("Result: ", result)
+    def 
 
 
