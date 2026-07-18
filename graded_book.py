@@ -61,6 +61,12 @@ class Gradedbook:
             if student.name== keyword:
                 return student
         return None
-    def __delete__(self, instance):
+    def delete_student(self, student_id):
+        if student_id in self.student:
+            del self.student[student_id]
+        if student_id in self.grade:
+            del self.grade[student_id]
+        print("student deleted!")
+        
 
 
