@@ -38,6 +38,11 @@ class Graded_book:
             return 0
         average=sum(score)/len(score)
         return average
+    def show_report(self, student_id):
+        student=self.student[student_id]
+        print("Student: ",student.name)
+        print("Student Id: ", student.student_id)
+        for course in self.grade[student_id]:
 
 
 
