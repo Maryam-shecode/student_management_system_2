@@ -68,4 +68,11 @@ class Gradedbook:
             del self.grade[student_id]
         print("student deleted!")
 
+    def dashbourd(self):
+        total assessment=0
+        for course in self.course.values()
+            total_assessment= total_assessment+len(course.assessments)
+        print("Total Students: ", len(self.student))
+        print("Total courses: ", len(self.courses))
+        print("Total Assessment: ", total_assessment)
 
