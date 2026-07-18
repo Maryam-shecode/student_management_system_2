@@ -67,6 +67,5 @@ class Gradedbook:
         if student_id in self.grade:
             del self.grade[student_id]
         print("student deleted!")
-        
 
 
