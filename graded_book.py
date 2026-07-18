@@ -54,6 +54,13 @@ class Gradedbook:
             print("course")
             print("Average: ",average)
             print("Result: ", result)
-    def 
+    def search_student(self,keyword ):
+        for student in self.student.values():
+            if student.student_id == keyword:
+                return student
+            if student.name== keyword:
+                return student
+        return None
+    
 
 
