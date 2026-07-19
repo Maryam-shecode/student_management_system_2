@@ -8,7 +8,7 @@ class Gradedbook:
         self.student[student.student_id]=student
     def add_course(self,course):
         self.courses[course.course_code]= course
-    def enrol_student(self, student_id, course_code):
+    def enroll_student(self, student_id, course_code):
         if student_id in self.student:
             if course_code in self.courses:
                 self.student[student_id].enrol_course(course_code)
