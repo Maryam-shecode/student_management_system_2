@@ -45,6 +45,7 @@ class Gradedbook:
             return "failed"
 
     def show_report(self, student_id):
+        print("*****************************")
         student=self.student[student_id]
         print("Student: ",student.name)
         print("Student Id: ", student.student_id)
