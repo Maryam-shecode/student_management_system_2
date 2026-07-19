@@ -19,7 +19,7 @@ class Gradedbook:
             print("student is not found")
     def add_assessment(self, course_code, assessment):
         if course_code in self.courses:
-            self.courses[course_code].add_assessement(assessment)
+            self.courses[course_code].add_assessment(assessment)
             print("Assessment is added")
         else:
             print("Course is not found!")

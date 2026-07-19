@@ -44,16 +44,18 @@ while choice !="0":
          print("B.Exam")
          print("C. project")
          assessment_type=input("Choose assessement type: ")
-         title_type=input("Enter assessment title type: ")
+         title_type=input("Enter assessment title: ")
          max_score=int(input("Enter maximum score: "))
 
          if assessment_type=="A":
              assessment=Quiz(title_type, max_score)
          elif assessment_type=="B":
              assessment=Exam(title_type,max_score)
+         elif assessment_type=="C":
+             assessment=Project(title_type,max_score)
          else:
-             assessment=Project(course_code,max_score)
-         graded_book.add_assessment(course_code, assessment)
+             print("Invalid Type")
+         graded_book.add_assessment(course_code,assessment)
      elif choice=="5":
          student_id=input("Enter student Id: ")
          course_code=input("Enter course code: ")
