@@ -20,7 +20,7 @@ class Student:
             print("Email has been recorded successfully")
         else:
             print("invalid")
-    def enroll_course(self, course_code):
+    def enrol_course(self, course_code):
         self.courses.append(course_code)
 
 

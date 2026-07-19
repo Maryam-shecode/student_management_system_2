@@ -8,7 +8,7 @@ class Gradedbook:
         self.student[student.student_id]=student
     def add_course(self,course):
         self.courses[course.course_code]= course
-    def enroll_student(self, student_id, course_code):
+    def enrol_student(self, student_id, course_code):
         if student_id in self.student:
             if course_code in self.courses:
                 self.student[student_id].enrol_course(course_code)
@@ -29,7 +29,7 @@ class Gradedbook:
         student_grade =self.grade[student_id]
         if course_code not in self.grade[student_id]:
             self.grade[student_id][course_code]={}
-        self.grade[student_id][course_code][assessment_title]={}
+        self.grade[student_id][course_code][assessment_title]=score
         print("Grade recorded successfully.")
     def calculate_average(self,student_id, course_code):
         score=self.grade[student_id][course_code].values()
@@ -51,7 +51,7 @@ class Gradedbook:
         for course in self.grade[student_id]:
             average =self.calculate_average(student_id,course)
             result=self.get_result(average)
-            print("course")
+            print(course)
             print("Average: ",average)
             print("Result: ", result)
     def search_student(self,keyword ):

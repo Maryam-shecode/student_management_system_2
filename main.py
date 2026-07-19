@@ -37,7 +37,7 @@ while choice !="0":
      elif choice=="3":
          student_id= input("Enter student Id: ")
          course_code=input("Enter course code: ")
-         graded_book.enroll_student(student_id,course_code)
+         graded_book.enrol_student(student_id,course_code)
      elif choice=="4":
          course_code=input("Enter course code: ")
          print("A. Quiz!")
@@ -81,6 +81,7 @@ while choice !="0":
          print("Program ended!")
      else:
          print("Invalid choice!")
+
 
 
 
