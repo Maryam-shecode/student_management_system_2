@@ -45,16 +45,23 @@ class Gradedbook:
             return "failed"
 
     def show_report(self, student_id):
-        print("*****************************")
         student=self.student[student_id]
+        print("*****************************")
         print("Student: ",student.name)
         print("Student Id: ", student.student_id)
+
         for course in self.grade[student_id]:
+            print("Course: ", course)
+            for assessment, score in self.grade[student_id][course].item():
+                print("Assessment :", assessment)
+                print("Score: ", score)
+
             average =self.calculate_average(student_id,course)
             result=self.get_result(average)
-            print(course)
+
             print("Average: ",average)
             print("Result: ", result)
+
     def search_student(self,keyword ):
         for student in self.student.values():
             if student.student_id == keyword:
