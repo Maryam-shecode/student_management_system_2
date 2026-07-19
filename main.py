@@ -40,13 +40,17 @@ while choice !="0":
          graded_book.enrol_student(student_id,course_code)
      elif choice=="4":
          course_code=input("Enter course code: ")
-         print("1. Quiz!")
-         print("2.Exam")
-         print("3. project")
+         print("A. Quiz!")
+         print("B.Exam")
+         print("C. project")
          assessment_type=input("Choose assessement type: ")
          title_type=input("Enter assessment title type: ")
-         max_score=input("Enter maximum score: ")
-         
+         max_score=int(input("Enter maximum score: "))
+
+         if assessment_type=="A":
+             assessment=Quiz(title_type, max_score)
+             
+
 
 
 
