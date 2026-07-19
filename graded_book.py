@@ -26,7 +26,7 @@ class Gradedbook:
     def record_grade(self,student_id, course_code, assessment_title,score):
         if student_id not in self.grade:
             self.grade[student_id]={}
-        student_grade =self.grade[student_id]
+
         if course_code not in self.grade[student_id]:
             self.grade[student_id][course_code]={}
         self.grade[student_id][course_code][assessment_title]=score
@@ -52,10 +52,14 @@ class Gradedbook:
 
         for course in self.grade[student_id]:
             print("Course: ", course)
-            for assessment, score in self.grade[student_id][course].item():
+
+            for assessment, score in self.grade[student_id][course].items():
                 print("Assessment :", assessment)
                 print("Score: ", score)
 
+                assessment_object=self.courses[course].find_assessment(assessment)
+                if assessment_object:
+                    print("comment: ", assessment_object.grade_message(score))
             average =self.calculate_average(student_id,course)
             result=self.get_result(average)
 
