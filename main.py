@@ -49,7 +49,37 @@ while choice !="0":
 
          if assessment_type=="A":
              assessment=Quiz(title_type, max_score)
-             
+         elif assessment_type=="B":
+             assessment=Exam(title_type,max_score)
+         else:
+             assessment=Project(course_code,max_score)
+         graded_book.add_assessment(course_code, assessment)
+     elif choice=="5":
+         student_id=input("Enter student Id: ")
+         course_code=input("Enter course code: ")
+         assessment_title=input("Enter assessment title: ")
+         score=int(input("Enter score: "))
+         graded_book.record_grade(student_id,course_code,assessment_title,score)
+     elif choice=="6":
+         student_id=input("Enter student Id: ")
+         graded_book.show_report(student_id)
+     elif choice =="7":
+         keyword=input("Enter student name or Id:")
+         student=graded_book.search_student(keyword)
+         if student != None:
+             student.display_info()
+         else:
+             print("studnet not found.")
+     elif choice=="8":
+         student_id=input("Enter student Id: ")
+         graded_book.delete_student(student_id)
+     elif choice =="9":
+         graded_book.dashboard()
+     elif choice =="0"
+         print("Program ended!")
+     else:
+         print("Invalid choice!")
+
 
 
 
