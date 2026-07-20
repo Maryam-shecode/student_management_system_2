@@ -16,5 +16,11 @@ d. Quiz
 e. Exam
 f  Project
 g. Gradebook
+## Encapsulation
+Encapsulation is used by keeping the data and functions together inside each class.
 
+Student stores student details.
+Course stores course details.
+Assessment stores assessment details.
+Gradebook manages all the system's tasks and operations.
 
