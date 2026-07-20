@@ -24,3 +24,23 @@ Course stores course details.
 Assessment stores assessment details.
 Gradebook manages all the system's tasks and operations.
 
+## Inheritance
+There is a parent which is the Assessment class.
+there are three other class which is child class that inherits from parent.
+Inheritance is used between:
+Quiz → Assessment 
+Exam → Assessment
+Project → Assessment
+
+## Method Overriding
+This method is used in these three class Quiz,Exam, and Project class
+each class provides its own grading message
+
+## Custom Features
+###  Update Student Name
+The user can update a student's name by entering the Student ID.
+###  Dashboard
+The dashboard displays:
+- Total number of students
+- Total number of courses
+- Total number of assessments
