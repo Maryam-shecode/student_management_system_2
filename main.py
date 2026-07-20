@@ -18,6 +18,7 @@ while choice !="0":
      print("7. Search student:")
      print("8. Delete student: ")
      print("9. Dashboard: ")
+     print("10. Updating name: ")
      print("0. Exit")
 
      choice= input("Enter your a number: ")
@@ -27,7 +28,6 @@ while choice !="0":
          email=input ("Enter student email: ")
          student=Student(name,student_id, email)
          graded_book.add_student(student)
-
      elif choice=="2":
          course_code=input("Enterr course code: ")
          course_name=input("Enter course name: ")

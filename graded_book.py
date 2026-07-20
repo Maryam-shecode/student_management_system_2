@@ -8,10 +8,12 @@ class Gradedbook:
         self.student[student.student_id]=student
     def add_course(self,course):
         self.courses[course.course_code]= course
+
     def enrol_student(self, student_id, course_code):
         if student_id in self.student:
             if course_code in self.courses:
                 self.student[student_id].enrol_course(course_code)
+                self.courses[course_code].add_student(student_id)
                 print("student enrolled successfully.")
             else:
                 print("course is not found")
@@ -45,6 +47,9 @@ class Gradedbook:
             return "failed"
 
     def show_report(self, student_id):
+        if student_id not in self.grade:
+            print("No grade has recorded! ")
+            return
         student=self.student[student_id]
         print("*****************************")
         print("Student: ",student.name)
