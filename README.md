@@ -1,3 +1,4 @@
-# system management system
-## learning management system 
-### first create the classes 
+## Name: Maryam Bigzad
+## Project title: Student management system 
+### Project description: 
+
