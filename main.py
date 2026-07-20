@@ -5,7 +5,9 @@ from quiz import Quiz
 from exam import Exam
 from project import Project
 from graded_book import Gradedbook
-graded_book=Gradedbook()
+
+graded_book=Gradedbook() #object
+
 choice=""
 while choice !="0":
      print("******* Student Grade Book system *******")
@@ -71,16 +73,17 @@ while choice !="0":
          if student is not None:
              student.display_info()
          else:
-             print("studnet not found.")
+             print("student not found.")
      elif choice=="8":
          student_id=input("Enter student Id: ")
          graded_book.delete_student(student_id)
      elif choice =="9":
          graded_book.dashboard()
+
      elif choice =="10":
          student_id=input("Enter your Id: ")
          student=graded_book.search_student(student_id)
-         if student !=None:
+         if student is not None:
              update_name=input("Enter your update name: ")
              student.name=update_name
              print("student name successfully updated! ")

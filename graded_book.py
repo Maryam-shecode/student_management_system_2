@@ -4,6 +4,7 @@ class Gradedbook:
         self.courses={}
         self.grade={}
         self.passing_grade=55
+
     def add_student(self,student):
         self.student[student.student_id]=student
     def add_course(self,course):
@@ -33,6 +34,7 @@ class Gradedbook:
             self.grade[student_id][course_code]={}
         self.grade[student_id][course_code][assessment_title]=score
         print("Grade recorded successfully.")
+
     def calculate_average(self,student_id, course_code):
         score=self.grade[student_id][course_code].values()
 
