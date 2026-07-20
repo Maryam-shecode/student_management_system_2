@@ -58,6 +58,7 @@ class Gradedbook:
                 print("Score: ", score)
 
                 assessment_object=self.courses[course].find_assessment(assessment)
+                print(assessment_object)
                 if assessment_object:
                     print("comment: ", assessment_object.grade_message(score))
             average =self.calculate_average(student_id,course)
