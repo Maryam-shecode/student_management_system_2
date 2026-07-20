@@ -82,8 +82,6 @@ class Gradedbook:
     def delete_student(self, student_id):
         if student_id in self.student:
             del self.student[student_id]
-        if student_id in self.grade:
-            del self.grade[student_id]
         print("student deleted!")
 
     def dashboard(self):

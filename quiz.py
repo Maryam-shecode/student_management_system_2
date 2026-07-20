@@ -1,5 +1,5 @@
 from assessment import Assessment
-class Quiz(Assessment):
+class Quiz(Assessment): # child class
     def display_info(self):
         print("Quiz: ", self.title)
         print("Maximum: ", self.max_score)

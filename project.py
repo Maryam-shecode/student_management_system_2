@@ -1,4 +1,5 @@
 from assessment import Assessment
+# child class
 class Project(Assessment):
     def display_info(self):
         print("Project: ", self.title)
