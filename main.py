@@ -68,7 +68,7 @@ while choice !="0":
      elif choice =="7":
          keyword=input("Enter student name or Id:")
          student=graded_book.search_student(keyword)
-         if student != None:
+         if student is not None:
              student.display_info()
          else:
              print("studnet not found.")
@@ -78,6 +78,16 @@ while choice !="0":
      elif choice =="9":
          graded_book.dashboard()
      elif choice =="10":
+         student_id=input("Enter your Id: ")
+         student=graded_book.search_student(student_id)
+         if student !=None:
+             update_name=input("Enter your update name: ")
+             student.name=update_name
+             print("student name successfully updated! ")
+         else:
+             print("student is not found")
+
+
      elif choice =="0":
          print("Program ended!")
      else:
