@@ -77,6 +77,7 @@ while choice !="0":
          graded_book.delete_student(student_id)
      elif choice =="9":
          graded_book.dashboard()
+     elif choice =="10":
      elif choice =="0":
          print("Program ended!")
      else:
